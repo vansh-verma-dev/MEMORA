@@ -1,10 +1,10 @@
 :root {
-  --Dark_Black: rgb(24, 23, 23);
-  --Light_black: rgb(48, 47, 47);
+  --Dark_Black: #181717;
+  --Light_black: #302f2f;
   --Primary: #6c63ff;
   --Secondary: #ff6584;
   --teal_background: #50e3c2;
-  --text: rgb(19, 18, 18);
+  --text: #131212;
   --Background: #f9f9ff;
   --white: #f9f9ff;
 }
@@ -23,19 +23,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
- 
 nav h1 {
-    margin-left: 40px;
+  margin-left: 40px;
   color: var(--Primary);
   font-size: 28px;
   font-weight: bold;
 }
 
- 
 nav ul {
   display: flex;
   gap: 25px;
@@ -50,7 +46,6 @@ nav ul li a {
   transition: 0.3s;
 }
 
- 
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -70,9 +65,8 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
- 
 .btn_group {
-    margin-right: 20px;
+  margin-right: 20px;
   display: flex;
   gap: 15px;
 }
@@ -103,4 +97,38 @@ nav ul li a:hover::after {
 .LoginBtn:hover {
   background: var(--Primary);
   color: white;
+}
+
+ 
+.Mobile_nav {
+  height: 7vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+.Mob_link {
+  color: var(--Dark_Black);
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+/* mobile layout */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  .Mobile_nav{
+    display: flex;
+  }
+  .Createbtn{
+    display: none;
+  }
 }
