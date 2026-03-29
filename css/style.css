@@ -23,6 +23,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 nav h1 {
@@ -99,7 +103,6 @@ nav ul li a:hover::after {
   color: white;
 }
 
- 
 .Mobile_nav {
   height: 7vh;
   width: 100%;
@@ -125,10 +128,74 @@ nav ul li a:hover::after {
   nav ul {
     display: none;
   }
-  .Mobile_nav{
+  .Mobile_nav {
     display: flex;
   }
-  .Createbtn{
+  .Createbtn {
     display: none;
   }
 }
+
+.Hero_Section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #F9F9FF;
+}
+
+.Hero_Section h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  background: linear-gradient(90deg, #6C63FF, #FF6584, #50E3C2, #6C63FF);
+  background-size: 200%;
+  animation: gradientMove 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+.input_box {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+
+.input_box i {
+  color: #888;
+  margin: 0 8px;
+}
+
+.input_box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+ 
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions i {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.actions i:hover {
+  background: #f1f1f1;
+}
+
+ 
