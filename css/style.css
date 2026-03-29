@@ -16,7 +16,9 @@
 body {
   background-color: var(--Background);
 }
-
+/* ========================================
+            ====NavBar=======
+======================================== */
 nav {
   height: 70px;
   width: 100%;
@@ -135,7 +137,9 @@ nav ul li a:hover::after {
     display: none;
   }
 }
-
+/* ========================================
+            --Hero_Section--
+======================================== */
 .Hero_Section {
   padding: 80px 20px;
   text-align: center;
@@ -198,4 +202,98 @@ nav ul li a:hover::after {
   background: #f1f1f1;
 }
 
- 
+.featured-designs_section{
+    width: 100%;
+    height: auto; 
+    background-color: var(--Background);
+}
+.hrading{
+    padding: 30px;
+}
+.hrading h2{
+    font-size: 42px;
+    color: var(--Primary);
+}
+.hrading p{
+    font-size: 15px;
+    color: var(--Primary);
+    text-shadow: 10px 10px 10px -10px gray;
+}
+
+
+ .root{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: space-around;
+
+ }
+ .Book_card{
+  margin: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 380px;
+  background-color: var(--white);
+  border: 2px solid rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 10px 10px 30px -10px gray;
+  transition: all 0.5s ease;
+ }
+ .Book_card h3{
+font-size: 22px;
+margin-left: 15px;
+color: var(--Dark_Black);
+margin-bottom: 10px;
+ }
+ .Book_card p{
+  margin-left: 15px;
+  color: var(--Light_black);
+  font-size: 14px;
+ }
+ .Book_card img{
+  width: 100%;
+  height: 200px;
+ }
+ .rating_box{
+  margin-top: 6px;
+  margin-left: 15px;
+  display: flex;
+  gap: 10px;
+ }
+ .rating_box .fa-star{
+  color: rgb(255, 187, 0);
+ }
+ .card_btn{
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  width: 80%;
+  height: 40px;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  background: linear-gradient(20deg,rgb(37, 37, 255),rgb(23, 23, 255),rgb(4, 4, 124));
+ }
+  .card_btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .price{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 23px;
+    color:var(--Light_black);
+  }
+  .oldPrice{
+    text-decoration: line-through;
+  color: #888;
+  font-size: 22px;
+  }
+  
+  .Book_card:hover{
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
