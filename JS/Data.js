@@ -1,6 +1,6 @@
 let Books = [
 
-  // 🌍 INTERNATIONAL
+  //  INTERNATIONAL
 
   {
     id: 1,
@@ -11,6 +11,7 @@ let Books = [
     reviews: 120,
     oldPrice: 349,
     price: 299,
+    category: "international",
     pages: 20,
     size: "A4",
     badge: "Best Seller"
@@ -25,6 +26,7 @@ let Books = [
     reviews: 210,
     oldPrice: 399,
     price: 329,
+    category: "international",
     pages: 24,
     size: "A4",
     badge: "Trending"
@@ -40,6 +42,7 @@ let Books = [
     oldPrice: 370,
     price: 310,
     pages: 22,
+    category: "international",
     size: "A4",
     badge: "Hot"
   },
@@ -53,6 +56,7 @@ let Books = [
     reviews: 150,
     oldPrice: 360,
     price: 305,
+    category: "international",
     pages: 20,
     size: "A4",
     badge: "Popular"
@@ -69,6 +73,7 @@ let Books = [
     reviews: 200,
     oldPrice: 320,
     price: 280,
+    category: "Trip Books",
     pages: 20,
     size: "A4",
     badge: "Best Seller"
@@ -83,6 +88,7 @@ let Books = [
     reviews: 175,
     oldPrice: 300,
     price: 260,
+    category: "Love Story",
     pages: 18,
     size: "A4",
     badge: "Trending"
@@ -97,6 +103,7 @@ let Books = [
     reviews: 140,
     oldPrice: 310,
     price: 270,
+    category: "Wedding",
     pages: 20,
     size: "A4",
     badge: "Popular"
@@ -112,31 +119,77 @@ let Books = [
     oldPrice: 350,
     price: 299,
     pages: 24,
+    category: "trip",
     size: "A4",
     badge: "Top Rated"
   }
 
 ];
  
-
+let searchBar = document.getElementById('search_input');
 let main = document.querySelector('.root');
- Books.forEach((curnEle,index)=>{
-    main.innerHTML +=  `
-      <div class="Book_card" key="index">
-          <img
-            src=${curnEle.image}
-            alt=""
-          />
-          <h3>${curnEle.title}</h3>
-          <p>${curnEle.subtitle}</p>
-          <div class="rating_box">
-            <span><i class="fa-solid fa-star"></i>${curnEle.rating}</span
-            ><span>(${curnEle.reviews}k riview)</span>
-          </div>
-          
-          <button class="card_btn">View Info</button>
-        </div>
-        `
- });
 
-console.log(main);
+// render Books in root 
+function renderBooks(data) {
+  main.innerHTML = "";
+
+  data.forEach((item, index) => {
+    main.innerHTML += `
+      <div class="Book_card">
+        <img src="${item.image}" alt="${item.title}" />
+
+        <h3>${item.title}</h3>
+        <p>${item.subtitle}</p>
+
+        <div class="rating_box">
+          <span>⭐ ${item.rating}</span>
+          <span>(${item.reviews} reviews)</span>
+        </div>
+
+        <button class="card_btn">View Info</button>
+      </div>
+    `;
+  });
+}
+
+renderBooks(Books);
+
+
+// search input filter &  render books 
+searchBar.addEventListener("input", function () {
+  let value = searchBar.value.toLowerCase();
+
+  let filtered = Books.filter((item) => {
+    return (
+      item.title.toLowerCase().includes(value) ||
+      item.subtitle.toLowerCase().includes(value) ||
+         item.category.toLowerCase().includes(value)
+    );
+  });
+
+  renderBooks(filtered);
+});
+
+let buttons = document.querySelectorAll(".Categories-Section button");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+ 
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    let category = btn.innerText.toLowerCase();
+
+    if(category === "all books"){
+      renderBooks(Books);
+      return;
+    }
+
+    let filtered = Books.filter((item) => {
+      return item.category.toLowerCase().includes(category);
+    });
+
+    renderBooks(filtered);
+  });
+});
+ 
