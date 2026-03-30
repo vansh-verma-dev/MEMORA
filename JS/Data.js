@@ -145,7 +145,10 @@ function renderBooks(data) {
           <span>⭐ ${item.rating}</span>
           <span>(${item.reviews} reviews)</span>
         </div>
-
+<div class="product_card_links">
+  <button><i class="fa-regular fa-heart"></i></button>
+  <button><i class="fa-solid fa-share"></i></button>
+</div>
         <button class="card_btn">View Info</button>
       </div>
     `;
@@ -170,7 +173,7 @@ searchBar.addEventListener("input", function () {
   renderBooks(filtered);
 });
 
-let buttons = document.querySelectorAll(".Categories-Section button");
+let buttons = document.querySelectorAll(".categories button");
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -192,4 +195,7 @@ buttons.forEach((btn) => {
     renderBooks(filtered);
   });
 });
+ 
+
+
  
