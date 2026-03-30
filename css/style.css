@@ -266,6 +266,9 @@ nav ul li a:hover::after {
     overflow-x: auto;
     flex-wrap: nowrap;
     gap: 5px;
+    width: 90vw;
+    overflow-x: hidden;
+    margin-left: 20px;
     padding-bottom: 10px;
    
   }
@@ -602,6 +605,12 @@ nav ul li a:hover::after {
 .review-card:hover {
   transform: translateY(-10px) scale(1.02);
 }
+@media (max-width:490px) {
+  .review-track{
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+  }
+}
 /* ========================================
             --About_Section--
 ======================================== */
@@ -805,4 +814,9 @@ nav ul li a:hover::after {
     gap: 10px;
     text-align: center;
   }
+}
+@media (max-width: 390px) {
+  .trust_section{
+  display: none;
+}
 }
