@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cart_root{
+    width: 100%;
+    height: auto;
+    
+}
+.cart_container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.cart_root .fa-bag-shopping{
+    font-size: 80px;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+}
+.cart_container h1{
+    font-size: 42px;
+}
+.cart_container a button{
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+ background:linear-gradient(rgb(88, 88, 255),rgb(30, 30, 255));
+}
