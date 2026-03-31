@@ -125,8 +125,8 @@ let Books = [
   }
 
 ];
- 
-let searchBar = document.getElementById('search_input');
+
+let searchBar = document.querySelector('.search_input');
 let main = document.querySelector('.root');
 
 // render Books in root 
@@ -159,43 +159,24 @@ renderBooks(Books);
 
 
 // search input filter &  render books 
-searchBar.addEventListener("input", function () {
+document.querySelector(".hero-btn-main").addEventListener("click", () => {
   let value = searchBar.value.toLowerCase();
+
+if(value === ""){
+  renderBooks(Books);
+  return;
+}
 
   let filtered = Books.filter((item) => {
     return (
       item.title.toLowerCase().includes(value) ||
       item.subtitle.toLowerCase().includes(value) ||
-         item.category.toLowerCase().includes(value)
+      item.category.toLowerCase().includes(value)
     );
   });
 
   renderBooks(filtered);
 });
-
-let buttons = document.querySelectorAll(".categories button");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
  
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    let category = btn.innerText.toLowerCase();
-
-    if(category === "all books"){
-      renderBooks(Books);
-      return;
-    }
-
-    let filtered = Books.filter((item) => {
-      return item.category.toLowerCase().includes(category);
-    });
-
-    renderBooks(filtered);
-  });
-});
- 
-
 
  
