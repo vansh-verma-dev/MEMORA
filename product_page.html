@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cart_page.css" />
-    <link
+    <link rel="stylesheet" href="css/Product_page.css" />
+       <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
@@ -25,16 +24,8 @@
       </ul>
 
       <div class="btn_group">
-        <a href="cart.html">
-          <button class="Createbtn">
-            <i class="fa-solid fa-cart-shopping"></i> Cart
-          </button></a
-        >
-        <a href="#">
-          <button class="LoginBtn">
-            <i class="fa-regular fa-heart"></i> whitelist
-          </button></a
-        >
+     <a href="cart.html">   <button class="Createbtn"><i class="fa-solid fa-cart-shopping"></i> Cart</button></a>
+      <a href="#">  <button class="LoginBtn"><i class="fa-regular fa-heart"></i> whitelist</button></a>
       </div>
     </nav>
 
@@ -70,13 +61,16 @@
     <!-- ===================================
     ----------cart root section------
     ===================================== -->
-    <section class="cart_root">
-      <div class="cart_container">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <h1>Empity Cart</h1>
-        <a href="index.html"> <button>continue shoping</button></a>
-      </div>
-    </section>
+
+
+<script>
+    function changeImage(element) {
+        document.getElementById('mainImage').src = element.src;
+        let thumbs = document.querySelectorAll('.thumb');
+        thumbs.forEach(t => t.classList.remove('active'));
+        element.classList.add('active');
+    }
+</script>
     <!-- ===================================
               ----Footer_Section----
     ======================================== -->
