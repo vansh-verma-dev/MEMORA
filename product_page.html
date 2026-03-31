@@ -61,16 +61,9 @@
     <!-- ===================================
     ----------cart root section------
     ===================================== -->
+<section class="product_container"></section>
 
 
-<script>
-    function changeImage(element) {
-        document.getElementById('mainImage').src = element.src;
-        let thumbs = document.querySelectorAll('.thumb');
-        thumbs.forEach(t => t.classList.remove('active'));
-        element.classList.add('active');
-    }
-</script>
     <!-- ===================================
               ----Footer_Section----
     ======================================== -->
@@ -137,4 +130,5 @@
       </div>
     </footer>
   </body>
+  <script type="module" src="JS/Product.js"></script>
 </html>
