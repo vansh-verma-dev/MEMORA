@@ -1,41 +1,37 @@
-/*
-Source - https://stackoverflow.com/a/76978444
-Posted by Roko C. Buljan, modified by community. See post 'Timeline' for change history
-Retrieved 2026-04-02, License - CC BY-SA 4.0
-*/
+ 
 
 * { box-sizing: border-box; }
-
-.book_section {
-  
+#body{
+    overflow: hidden;
+}
+.book_section{
   margin: 0;
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   perspective: 1000px;
   font: 16px/1.4 sans-serif;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #232425;
 }
 
 .book {
   display: flex;
+  height: 70vh;           
+  aspect-ratio: 4 / 3;   
   margin: auto;
-  width: 540px;
+ 
   pointer-events: none;
   transform-style: preserve-3d;
   transition: translate 1s;
   translate: calc(min(var(--c), 1) * 50%) 0%;
-  /* DEMO ONLY: incline on the X axis for pages preview */
   rotate: 1 0 0 30deg;
 }
 
 .page {
   --thickness: 5;
-  /* PS: Don't go below thickness 0.4 or the pages might transpare */
   flex: none;
   display: flex;
   width: 100%;
-  /*1* allow pointer events on pages */
   pointer-events: all;
   user-select: none;
   transform-style: preserve-3d;
@@ -62,7 +58,6 @@ Retrieved 2026-04-02, License - CC BY-SA 4.0
   padding: 2rem;
   backface-visibility: hidden;
   background-color: #fff;
-  /* Fix backface visibility Firefox: */
   translate: 0px;
 }
 
@@ -70,4 +65,53 @@ Retrieved 2026-04-02, License - CC BY-SA 4.0
   background-image: linear-gradient(to right, #fff 80%, #ddd 100%);
   translate: -100% 0;
   rotate: 0 1 0 180deg;
+}
+
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .book_section {
+    height: calc(100dvh - 60px);
+    padding: 10px;
+  }
+
+  .book {
+    height: 45vh;              
+    aspect-ratio: 3 / 4;       
+    rotate: 0deg;              
+  }
+
+  .page {
+    --thickness: 2;            
+  }
+
+  .front,
+  .back {
+    padding: 6px;             
+  }
+
+  .page img {
+    object-fit: contain;      
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #prev-btn {
+    left: 5px;
+  }
+
+  #next-btn {
+    right: 5px;
+  }
+}
+
+
+.page {
+  touch-action: manipulation;
 }
