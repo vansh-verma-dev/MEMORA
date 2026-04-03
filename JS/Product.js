@@ -102,23 +102,40 @@ function changeImage(element) {
   thumbs.forEach((t) => t.classList.remove("active"));
   element.classList.add("active");
 }
-//wishlist btn 
+//wishlist btn
 
-// cart btn 
+// cart btn
 let msg_bar = document.getElementById("msg_bar");
 let cartBtn = document.querySelector(".btn-cart");
-let msg_close_btn = document.getElementById('msg_close_btn');
-let cart_alert = document.getElementById('cart_alert');
+let msg_close_btn = document.getElementById("msg_close_btn");
+let cart_alert = document.getElementById("cart_alert");
 
 cartBtn.addEventListener("click", () => {
   msg_bar.style.display = "flex";
-  cart_alert.style.display = "flex"
- 
+  cart_alert.style.display = "flex";
+
   setTimeout(() => {
     msg_bar.style.display = "none";
   }, 3000);
 
-   msg_close_btn.addEventListener('click',()=>{
-  msg_bar.style.display = "none";
-   }) 
+  msg_close_btn.addEventListener("click", () => {
+    msg_bar.style.display = "none";
+  });
+
+  let OrderData = {
+    productName: product.title,
+    productSubhading: product.subtitle,
+    Rating: product.rating,
+    Riview: product.Riview,
+    banner: product.image,
+    price: product.price,
+  };
+  let productCartData = JSON.parse(localStorage.getItem("productCartData"));
+
+  if(productCartData === null){
+    productCartData =[];
+}
+productCartData.push(OrderData);
+localStorage.setItem("productCartData",JSON.stringify(productCartData));
+  console.log(OrderData);
 });
