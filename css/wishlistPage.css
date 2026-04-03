@@ -1,0 +1,28 @@
+.wishlist_root{
+    width: 100%;
+    height: auto;
+    
+}
+.wishlist_content{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.wishlist_root .fa-bag-shopping{
+    font-size: 80px;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+}
+.wishlist_content h1{
+    font-size: 42px;
+}
+.wishlist_content a button{
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+ background:linear-gradient(rgb(88, 88, 255),rgb(30, 30, 255));
+}
