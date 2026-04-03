@@ -24,9 +24,14 @@
       </ul>
 
       <div class="btn_group">
-     <a href="cart.html">   <button class="Createbtn"><i class="fa-solid fa-cart-shopping"></i> Cart</button></a>
+     <a href="cart.html">   <button class="Createbtn"><i class="fa-solid fa-cart-shopping"></i> Cart <span id="cart_alert">.</span></button></a>
       <a href="wishlist.html">  <button class="LoginBtn"><i class="fa-regular fa-heart"></i> whitelist</button></a>
+       <div class="msgbar" id="msg_bar">
+        <i class="fa-solid fa-check-double" ></i> <p>product add to cart</p> <i class="fa-solid fa-xmark" id="msg_close_btn"></i>
       </div>
+      </div>
+
+     
     </nav>
 
     <section class="Mobile_nav">
@@ -61,7 +66,10 @@
     <!-- ===================================
     ----------cart root section------
     ===================================== -->
-<section class="product_container"></section>
+<section class="product_container">
+<!-- data render in product.js file -->
+
+</section>
 
 
     <!-- ===================================

@@ -1,4 +1,3 @@
-
 import { Books } from "./BooksData.js";
 
 let params = new URLSearchParams(window.location.search);
@@ -97,12 +96,29 @@ container.innerHTML = `
 </div>
 `;
 
+function changeImage(element) {
+  document.getElementById("mainImage").src = element.src;
+  let thumbs = document.querySelectorAll(".thumb");
+  thumbs.forEach((t) => t.classList.remove("active"));
+  element.classList.add("active");
+}
+//wishlist btn 
 
+// cart btn 
+let msg_bar = document.getElementById("msg_bar");
+let cartBtn = document.querySelector(".btn-cart");
+let msg_close_btn = document.getElementById('msg_close_btn');
+let cart_alert = document.getElementById('cart_alert');
+
+cartBtn.addEventListener("click", () => {
+  msg_bar.style.display = "flex";
+  cart_alert.style.display = "flex"
  
-    function changeImage(element) {
-        document.getElementById('mainImage').src = element.src;
-        let thumbs = document.querySelectorAll('.thumb');
-        thumbs.forEach(t => t.classList.remove('active'));
-        element.classList.add('active');
-    }
- 
+  setTimeout(() => {
+    msg_bar.style.display = "none";
+  }, 3000);
+
+   msg_close_btn.addEventListener('click',()=>{
+  msg_bar.style.display = "none";
+   }) 
+});

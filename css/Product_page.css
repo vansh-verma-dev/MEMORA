@@ -13,7 +13,35 @@
   --white: #f9f9ff;
   --accent: #d4af37;
 }
+.msgbar{
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 300px;
+  border-radius: 5px;
+  height: 20px;
+  background-color: rgb(202, 255, 158);
+  box-shadow: 10px 10px 30px -10px gray;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+  align-items: center;
 
+  display: none;
+}
+.msgbar .fa-check-double{
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(230, 230, 230, 0.897);
+  padding: 7px;
+  color: rgb(21, 255, 0);
+}
+.msgbar .fa-xmark{
+  color: gray;
+  cursor: pointer;
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
@@ -79,6 +107,7 @@ nav ul li a:hover::after {
 }
 
 .btn_group {
+  position: relative;
   margin-right: 20px;
   display: flex;
   gap: 15px;
@@ -92,12 +121,23 @@ nav ul li a:hover::after {
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  position: relative;
 }
 
 .Createbtn:hover {
   background: var(--Secondary);
 }
-
+#cart_alert{
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  background-color: red;
+  color: transparent;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: none;
+}
 .LoginBtn {
   padding: 8px 18px;
   border: 1px solid var(--Primary);
@@ -299,7 +339,26 @@ nav ul li a:hover::after {
 .btn-buy:hover {
   background: #d35400;
 }
-
+.btn-wishlist{
+ 
+  background: transparent;
+  color: var(--white);
+  background-color: var(--accent);
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 60px;
+  transition: all 0.4s ease;
+}
+.btn-wishlist i{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+ .btn-wishlist:hover{
+  background: #d35400;
+ }
 .trust-badges {
   display: flex;
   gap: 20px;

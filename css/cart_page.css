@@ -1,32 +1,92 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.cart_root{
-    width: 100%;
-    height: auto;
-    
+.cart_root {
+  width: 100%;
+  height: auto;
 }
-.cart_container{
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
+.cart_container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
 }
-.cart_root .fa-bag-shopping{
-    font-size: 80px;
-    margin-top: 40px;
-    text-align: center;
-    justify-content: center;
+.cart_root .fa-bag-shopping {
+  font-size: 80px;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center;
 }
-.cart_container h1{
-    font-size: 42px;
+.cart_container h1 {
+  font-size: 42px;
 }
-.cart_container a button{
-    height: 40px;
-    width: 200px;
-    margin-top: 20px;
-    color: white;
-    border: none;
-    border-radius: 10px;
- background:linear-gradient(rgb(88, 88, 255),rgb(30, 30, 255));
+.cart_container a button {
+  height: 40px;
+  width: 200px;
+  margin-top: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(rgb(88, 88, 255), rgb(30, 30, 255));
+}
+.Cart_section {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.product_cart_deatils {
+  overflow-y: scroll;
+  width: 65vw;
+  height: 90vh;
+  background-color: rgb(238, 238, 238);
+}
+.product_cart_deatils::-webkit-scrollbar {
+  opacity: 0;
+}
+.invoice_section {
+  width: 33vw;
+  background-color: white;
+}
+.product_details {
+  margin: 5px;
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+.product_head {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.product_details img {
+  width: 90px;
+  height: 90px;
+}
+.product_tittle h1 {
+  font-size: 20px;
+  color: rgb(49, 49, 49);
+}
+.product_tittle p {
+  font-family: 14px;
+  font-style: italic;
+}
+.product_btn_group {
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  width: 90%;
+ padding: 10px;
+ 
+}
+.product_btn_group button {
+  color: gray;
+  height: 100%;
+ cursor: pointer;
+  width: 400px;
+  background-color: rgb(214, 212, 212);
+  border: 1px solid rgba(37, 37, 37, 0.829);
 }
