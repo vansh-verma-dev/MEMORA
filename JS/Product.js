@@ -20,7 +20,7 @@ container.innerHTML = `
                 <img src="https://i.pinimg.com/1200x/9c/33/49/9c334953eb6687c1b082bbdbeaa693d6.jpg" class="thumb" onclick="changeImage(this)">
                 <img src="https://i.pinimg.com/1200x/9c/33/49/9c334953eb6687c1b082bbdbeaa693d6.jpg" class="thumb" onclick="changeImage(this)">
                 <img src="https://i.pinimg.com/1200x/9c/33/49/9c334953eb6687c1b082bbdbeaa693d6.jpg" class="thumb" onclick="changeImage(this)">
-                <img src="https://i.pinimg.com/736x/e6/74/a7/e674a70b9b971edcde69fd6b9bde12d2.jpg" class="thumb" onclick="changeImage(this)">
+              
             </div>
         </div>
 
@@ -126,7 +126,7 @@ cartBtn.addEventListener("click", () => {
     productName: product.title,
     productSubhading: product.subtitle,
     Rating: product.rating,
-    Riview: product.Riview,
+    Riview: product.reviews,
     banner: product.image,
     price: product.price,
   };

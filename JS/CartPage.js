@@ -56,14 +56,26 @@ function ShowProduct() {
   });
 }
 
+let msgbar = document.querySelector('.msgShowBox');
+let faxmarkBtn = document.querySelector('.fa-xmark');
+ 
 // delete btn remove index product card
 function removeItem(index) {
+ 
   let ProductData = JSON.parse(localStorage.getItem("productCartData")) || [];
 
   ProductData.splice(index, 1);
 
   localStorage.setItem("productCartData", JSON.stringify(ProductData));
 
+  msgbar.style.display = "flex";
+
+  setTimeout(()=>{
+      msgbar.style.display = "none";
+  },3000)
+  faxmarkBtn.addEventListener('click',()=>{
+        msgbar.style.display = "none";
+  })
   ShowProduct(); 
 }
 // window data loard & and run function
