@@ -34,7 +34,7 @@ function renderBooks(data) {
     `;
   });
 
-  // 🔥 CLICK EVENT (IMPORTANT)
+  //  CLICK EVENT (IMPORTANT)
   document.querySelectorAll('.card_btn').forEach((btn) => {
     btn.addEventListener("click", () => {
       let id = btn.getAttribute("data-id");
@@ -43,10 +43,10 @@ function renderBooks(data) {
   });
 }
 
-// 🔥 FIRST LOAD
+// FIRST LOAD
 renderBooks(Books);
 
-// 🔍 SEARCH
+// SEARCH
 document.querySelector(".hero-btn-main").addEventListener("click", () => {
   let value = searchBar.value.toLowerCase();
 
