@@ -2,23 +2,27 @@
   --Dark_Black: #181717;
   --Light_black: #302f2f;
   --Primary: #6c63ff;
-  --Secondary: #ff6584;
+  --Secondary: #e02d51;
   --teal_background: #50e3c2;
   --text: #131212;
   --Background: #f9f9ff;
   --white: #f9f9ff;
   --accent: #d4af37;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: var(--Background);
 }
+
 /* ========================================
             ====NavBar=======
 ======================================== */
@@ -126,6 +130,7 @@ nav ul li a:hover::after {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   background-color: var(--white);
 }
+
 .Mob_link {
   color: var(--Dark_Black);
   display: inline-block;
@@ -133,18 +138,22 @@ nav ul li a:hover::after {
   text-align: center;
   padding: 5px;
 }
+
 /* mobile layout */
 @media (max-width: 768px) {
   nav ul {
     display: none;
   }
+
   .Mobile_nav {
     display: flex;
   }
+
   .Createbtn {
     display: none;
   }
 }
+
 /* ========================================
             --Hero_Section--
 ======================================== */
@@ -168,11 +177,9 @@ nav ul li a:hover::after {
   right: -5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(212, 175, 55, 0.1) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(212, 175, 55, 0.1) 0%,
+      rgba(255, 255, 255, 0) 70%);
   z-index: 1;
 }
 
@@ -315,6 +322,7 @@ nav ul li a:hover::after {
   margin: 0;
   color: #888;
 }
+
 .promo-info strong {
   font-size: 1.1rem;
   color: #1a1a1a;
@@ -325,20 +333,26 @@ nav ul li a:hover::after {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .hero-text-side h1 {
     font-size: 2.8rem;
   }
+
   .search-wrapper {
     margin: 0 auto;
   }
+
   .hero-trust-indicators {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
   }
+
   .hero-visual-side {
     display: none;
-  } /* Mobile par saaf look ke liye hide */
+  }
+
+  /* Mobile par saaf look ke liye hide */
   .hero-modern {
     padding-top: 50px;
     min-height: auto;
@@ -353,15 +367,18 @@ nav ul li a:hover::after {
   height: auto;
   background-color: var(--Background);
 }
+
 .hrading {
   padding: 30px;
 }
+
 .section-title {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 50px;
   position: relative;
 }
+
 .section-title::after {
   content: "";
   width: 60px;
@@ -379,6 +396,7 @@ nav ul li a:hover::after {
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
 }
+
 /* ===========card========== */
 .product_container {
   display: grid;
@@ -393,7 +411,7 @@ nav ul li a:hover::after {
   border-radius: 20px;
   overflow: hidden;
   transition: 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   position: relative;
   width: 320px;
   margin: 20px;
@@ -403,7 +421,7 @@ nav ul li a:hover::after {
 /* Hover effect */
 .Book_card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Image box */
@@ -450,7 +468,7 @@ nav ul li a:hover::after {
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
 
@@ -507,6 +525,27 @@ nav ul li a:hover::after {
     height: 180px;
   }
 }
+
+@media (max-width:480px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .root {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .Book_card {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 /* ========================================
             --Trust_Section--
 ======================================== */
@@ -519,6 +558,7 @@ nav ul li a:hover::after {
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .trust-item {
   font-weight: 600;
   display: flex;
@@ -526,108 +566,143 @@ nav ul li a:hover::after {
   gap: 10px;
   color: #666;
 }
+
 .trust-item i {
   color: var(--accent);
   font-size: 1.5rem;
 }
+
 /* ========================================
             --Riview_Section--
 ======================================== */
-.reviews {
-  padding: 80px 20px;
-  background: linear-gradient(120deg, #f9f9ff, #eef0ff);
-  overflow: hidden;
+.review-section {
+  padding: 40px 20px;
+  background-color: var(--white);
 }
 
-.review-header {
+
+.review-section h1 {
+  font-size: 42px;
   text-align: center;
-  margin-bottom: 40px;
+  font-weight: 300;
+  font-style: italic;
 }
 
-.review-header h2 {
-  font-size: 32px;
-  background: linear-gradient(90deg, #6c63ff, #ff6584);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.review-section h1 span {
+  color: var(--Secondary);
 }
 
-.review-header p {
-  color: #666;
-  margin-top: 8px;
-}
 
-.review-track {
-  display: flex;
+.riview_contain {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  animation: scroll 15s linear infinite;
 }
 
-.review-card {
-  min-width: 300px;
-  padding: 20px;
-  border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(15px);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+.riview_card {
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #8080802e;
+  width: 400px;
+  height: 180px;
   transition: 0.3s;
 }
 
-.user {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 15px;
+
+.riview_card:hover {
+  transform: translateY(-5px);
 }
 
-.user img {
-  width: 45px;
-  height: 45px;
+
+.riview_head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.riview_head img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
-.user h4 {
-  font-size: 15px;
+
+.riview_head h3 {
+  font-size: 16px;
 }
 
-.user span {
-  font-size: 11px;
-  color: #888;
-}
 
-.review-card p {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.bottom {
+.riview_icon {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 5px;
 }
 
-.stars {
-  color: #ffb400;
+.riview_icon p {
+  margin-left: 5px;
+  font-size: 14px;
 }
 
-.tag {
-  font-size: 12px;
-  background: #6c63ff;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 8px;
+
+.quote_icon {
+  margin-left: auto;
+  font-size: 20px;
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
 }
 
-.review-card:hover {
-  transform: translateY(-10px) scale(1.02);
+
+.riview_card i {
+  color: #ff9800;
 }
-@media (max-width: 490px) {
-  .review-track {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+
+
+.riview_para {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/*   RESPONSIVE  */
+
+
+@media (max-width: 768px) {
+  .review-section h1 {
+    font-size: 32px;
   }
+}
+
+
+@media (max-width: 480px) {
+  .review-section h1 {
+    font-size: 26px;
+  }
+
+  .riview_contain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .riview_card{
+    width: 180px;
+    height: auto;
+    margin: 0;
+padding:5px;
+  }
+  .riview_head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+ .quote_icon{
+  display: none;
+ }
 }
 
 /* --- WHY CHOOSE US SECTION --- */
@@ -636,31 +711,37 @@ nav ul li a:hover::after {
   background: #fff;
   text-align: center;
 }
+
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   margin-top: 50px;
 }
+
 .why-card {
   padding: 30px;
   border-radius: 15px;
   background: var(--light);
   transition: 0.3s ease;
 }
+
 .why-card i {
   font-size: 2.5rem;
   color: var(--accent);
   margin-bottom: 20px;
 }
+
 .why-card h3 {
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
+
 .why-card p {
   color: #666;
   font-size: 0.95rem;
 }
+
 /* ========================================
             --About_Section--
 ======================================== */
@@ -687,7 +768,8 @@ nav ul li a:hover::after {
 .main-about-img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 20px 20px 0px var(--light); /* Decorative background box */
+  box-shadow: 20px 20px 0px var(--light);
+  /* Decorative background box */
   display: block;
 }
 
@@ -734,10 +816,12 @@ nav ul li a:hover::after {
   color: #ff4757;
   font-size: 1.5rem;
 }
+
 .floating-stat strong {
   font-size: 1.2rem;
   display: block;
 }
+
 .floating-stat p {
   font-size: 0.8rem;
   color: #777;
@@ -807,6 +891,7 @@ nav ul li a:hover::after {
   margin-bottom: 5px;
   font-size: 1rem;
 }
+
 .a-feat-item p {
   font-size: 0.85rem;
   color: #777;
@@ -834,25 +919,31 @@ nav ul li a:hover::after {
     grid-template-columns: 1fr;
     gap: 60px;
   }
+
   .about-visual {
     padding-left: 0;
     order: 2;
   }
+
   .about-content {
     order: 1;
     text-align: center;
   }
+
   .about-content h2 {
     font-size: 2.2rem;
   }
+
   .a-feat-item {
     text-align: left;
   }
+
   .floating-stat {
     right: 10px;
     bottom: 20px;
   }
 }
+
 /* ========================================
             --Footer_Section--
 ======================================== */
@@ -985,6 +1076,7 @@ nav ul li a:hover::after {
     text-align: center;
   }
 }
+
 @media (max-width: 390px) {
   .trust_section {
     display: none;
@@ -997,12 +1089,14 @@ nav ul li a:hover::after {
   background: #fff;
   text-align: center;
 }
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
+
 .step-card {
   padding: 40px;
   border: 1px solid #eee;
@@ -1010,10 +1104,12 @@ nav ul li a:hover::after {
   position: relative;
   transition: 0.3s;
 }
+
 .step-card:hover {
   border-color: var(--accent);
   transform: translateY(-10px);
 }
+
 .step-num {
   position: absolute;
   top: -20px;
@@ -1029,6 +1125,7 @@ nav ul li a:hover::after {
   justify-content: center;
   font-weight: bold;
 }
+
 .step-card i {
   font-size: 2.5rem;
   color: var(--primary);
@@ -1040,10 +1137,12 @@ nav ul li a:hover::after {
   padding: 80px 8%;
   background: var(--light);
 }
+
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .faq-item {
   background: white;
   margin-bottom: 15px;
@@ -1052,6 +1151,7 @@ nav ul li a:hover::after {
   cursor: pointer;
   border: 1px solid #eee;
 }
+
 .faq-question {
   padding: 20px;
   font-weight: 600;
@@ -1059,6 +1159,7 @@ nav ul li a:hover::after {
   justify-content: space-between;
   align-items: center;
 }
+
 .faq-answer {
   padding: 0 20px;
   max-height: 0;
@@ -1067,14 +1168,13 @@ nav ul li a:hover::after {
   color: #666;
   font-size: 0.9rem;
 }
+
 .faq-item.active .faq-answer {
   padding: 0 20px 20px 20px;
   max-height: 200px;
 }
+
 .faq-item.active i {
   transform: rotate(180deg);
   color: var(--accent);
 }
-
-
-

@@ -73,3 +73,24 @@ document.querySelector(".hero-btn-main").addEventListener("click", () => {
 
 
 
+
+
+
+ 
+  const elements = document.querySelectorAll(".scroll");
+
+  function checkScroll() {
+    const triggerBottom = window.innerHeight * 0.8;
+
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+
+      if (top < triggerBottom) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
+ 
