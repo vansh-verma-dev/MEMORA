@@ -9,28 +9,32 @@ function renderBooks(data) {
 
   data.forEach((item) => {
     main.innerHTML += `
-      <div class="Book_card">
+<div class="Book_card">
 
-        <img src="${item.image}" alt="${item.title}" />
+  <div class="img_box">
+    <img src="${item.image}" alt="${item.title}" />
 
-        <h3>${item.title}</h3>
-        <p>${item.subtitle}</p>
+    <div class="product_card_links">
+      <button><i class="fa-regular fa-heart"></i></button>
+      <button><i class="fa-solid fa-share"></i></button>
+    </div>
+  </div>
 
-        <div class="rating_box">
-          <span>⭐ ${item.rating}</span>
-          <span>(${item.reviews} reviews)</span>
-        </div>
+  <div class="card_content">
+    <h3>${item.title}</h3>
+    <p>${item.subtitle}</p>
 
-        <div class="product_card_links">
-          <button><i class="fa-regular fa-heart"></i></button>
-          <button><i class="fa-solid fa-share"></i></button>
-        </div>
+    <div class="rating_box">
+      <span>⭐ ${item.rating}</span>
+      <span>(${item.reviews} reviews)</span>
+    </div>
 
-        <button class="card_btn" data-id="${item.id}">
-          View Info
-        </button>
+    <button class="card_btn" data-id="${item.id}">
+      View Info →
+    </button>
+  </div>
 
-      </div>
+</div>
     `;
   });
 
