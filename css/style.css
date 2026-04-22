@@ -1180,3 +1180,152 @@ nav ul li a:hover::after {
   transform: rotate(180deg);
   color: var(--accent);
 }
+
+/* ====================================
+        ------easy-step---
+=================================== */
+.easy-steps {
+  margin-top: 20px;
+  width: 100%;
+  padding-top: 30px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.easy-steps_head {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.easy-steps_head h2 {
+  font-size: 42px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #111;
+}
+
+.easy-steps_head p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  font-style: italic;
+}
+
+.esay-contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.esay_card {
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.esay_card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.esay_card h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #111;
+  font-weight: 700;
+}
+
+.esay_card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px) {
+  .easy-steps {
+    padding: 70px 6%;
+  }
+
+  .easy-steps_head {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .easy-steps_head h2 {
+    font-size: 34px;
+  }
+
+  .easy-steps_head p {
+    font-size: 17px;
+  }
+
+  .esay-contain {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .easy-steps {
+    padding: 60px 5%;
+  }
+
+  .easy-steps_head h2 {
+    font-size: 28px;
+  }
+
+  .easy-steps_head p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .esay-contain {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .esay_card {
+    padding: 18px;
+  }
+
+  .esay_card img {
+    height: 220px;
+  }
+
+  .esay_card h2 {
+    font-size: 18px;
+  }
+
+  .esay_card p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 480px) {
+  .easy-steps_head h2 {
+    font-size: 24px;
+  }
+
+  .easy-steps_head p {
+    font-size: 14px;
+  }
+
+  .esay_card img {
+    height: 200px;
+  }
+}
