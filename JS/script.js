@@ -3,7 +3,7 @@ import { Books } from "./BooksData.js";
 console.log(Books)
 let searchBar = document.querySelector('.search_input');
 let main = document.querySelector('.root');
- 
+
 function renderBooks(data) {
   main.innerHTML = "";
 
@@ -76,21 +76,22 @@ document.querySelector(".hero-btn-main").addEventListener("click", () => {
 
 
 
- 
-  const elements = document.querySelectorAll(".scroll");
 
-  function checkScroll() {
-    const triggerBottom = window.innerHeight * 0.8;
+const elements = document.querySelectorAll(".scroll");
 
-    elements.forEach(el => {
-      const top = el.getBoundingClientRect().top;
+function checkScroll() {
+  const triggerBottom = window.innerHeight * 0.8;
 
-      if (top < triggerBottom) {
-        el.classList.add("active");
-      }
-    });
-  }
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
 
-  window.addEventListener("scroll", checkScroll);
-  checkScroll();
+    if (top < triggerBottom) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", checkScroll);
+checkScroll();
+
  
