@@ -220,19 +220,4 @@ export const  Books = [
   badge: "Hot",
   category: "Travel"
 },
-{
-  id: 16,
-  title: "Trip Tales",
-  subtitle: "Every trip tells a story",
-  image: "https://i.pinimg.com/736x/69/4a/35/694a35ee8dbb9d7a78caa0a927582461.jpg",
-  rating: 4.8,
-  reviews: 190,
-  oldPrice: 410,
-  price: 339,
-  pages: 25,
-  size: "A4",
-  badge: "Premium",
-  category: "Travel"
-}
-
 ];

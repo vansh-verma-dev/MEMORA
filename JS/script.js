@@ -94,7 +94,7 @@ function checkScroll() {
 window.addEventListener("scroll", checkScroll);
 checkScroll();
 
- /* Smooth FAQ Toggle */
+/* ================= FAQ SMOOTH TOGGLE ================= */
 
 const faqQuestions = document.querySelectorAll(".faq-question");
 
