@@ -94,4 +94,20 @@ function checkScroll() {
 window.addEventListener("scroll", checkScroll);
 checkScroll();
 
- 
+ /* Smooth FAQ Toggle */
+
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach((question) => {
+  question.addEventListener("click", () => {
+    const currentCard = question.parentElement;
+
+    document.querySelectorAll(".faq-card").forEach((card) => {
+      if (card !== currentCard) {
+        card.classList.remove("active");
+      }
+    });
+
+    currentCard.classList.toggle("active");
+  });
+});
